@@ -1,0 +1,12 @@
+# Idris2 build artifacts
+build/
+.build/
+*.ibc
+
+# Nix
+result
+.direnv
+
+# Claude/MCP generated
+.mcp.json
+.pre-commit-config.yaml

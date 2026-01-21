@@ -1,0 +1,5 @@
+package arbitrary-precision-calculator
+
+sourcedir = "src"
+main = Main
+executable = arbitrary-precision-calculator
