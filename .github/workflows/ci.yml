@@ -28,3 +28,13 @@ jobs:
 
       - name: Build
         run: nix build .#ci
+
+  ci-success:
+    needs: [ci]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: Verify all checks passed
+        run: exit 1
+        if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
